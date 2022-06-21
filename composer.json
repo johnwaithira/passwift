@@ -1,0 +1,18 @@
+{
+    "name": "waithira/passwift",
+    "description" : "PHP MVC password manager",
+    "autoload": {
+        "psr-4": {
+            "Waithira\\Passwift\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "johnwaithira",
+            "email": "waithirajon@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.4"
+    }
+}
