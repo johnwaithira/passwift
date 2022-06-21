@@ -4,5 +4,8 @@
     
     class Database
     {
-        
+        public function __construct()
+        {
+            var_dump($_SERVER;
+        }
     }
