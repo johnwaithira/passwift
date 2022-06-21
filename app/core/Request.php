@@ -8,5 +8,10 @@
         {
             
         }
+    
+        public function method()
+        {
+            
+        }
         
     }
