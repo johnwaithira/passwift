@@ -18,8 +18,9 @@
             catch(\Exception $exception)
             {
                 echo "<pre>";
-                var_dump($exception);
-                echo "</pre>";
+                var_dump($exception->getMessage());
+                
+                exit("</pre>");
             }
         }
     }
