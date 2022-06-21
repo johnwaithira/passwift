@@ -4,5 +4,9 @@
     
     class Request
     {
+        public function path()
+        {
+            
+        }
         
     }
