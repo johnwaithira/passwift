@@ -2,6 +2,7 @@
     
     namespace Waithira\Passwift\app\core;
     
+    use Waithira\Passwift\app\Http\Exception\Handler;
     use Waithira\Passwift\database\Database;
 
     class Application
