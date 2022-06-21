@@ -1,6 +1,7 @@
 <?php
     
     namespace Waithira\Passwift\app\core;
+    use Waithira\Passwift\app\core\Application;
     
     class Controller
     {
