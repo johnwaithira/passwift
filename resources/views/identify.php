@@ -34,9 +34,9 @@
             </div>
             <hr>
             <div class="p-20">
-                <div class="btns float-right">
-                    <button>Cancel</button>
-                    <button style="background: #216fdb;">Search</button>
+                <div class="btns text-right">
+                    <button class="b-n p-10-20 b-r-6 f-w-800 f-s-18" style="background: #e4e6eb;">Cancel</button>
+                    <button class="b-n p-10-20 m-l-5 b-r-6" style="background: #216fdb;">Search</button>
                 </div>
             </div>
         </div>
