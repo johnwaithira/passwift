@@ -8,8 +8,8 @@
     require (dirname(__DIR__)."/SMTP/PHPMailer/PHPMailer.php");
     require (dirname(__DIR__)."/SMTP/PHPMailer/SMTP.php");
 
-use Dotenv\Dotenv;
-use PHPMailer\PHPMailer\Exception;
+    use Dotenv\Dotenv;
+    use PHPMailer\PHPMailer\Exception;
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
     class MailServer
