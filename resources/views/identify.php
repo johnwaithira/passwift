@@ -33,10 +33,10 @@
                 <input type="text" class="p-17 w-p-100 b-r-6" style="border: 1px solid #ccd0d5;" placeholder="Enter your email address or your username">
             </div>
             <hr>
-            <div class="p-20">
+            <div class="p-15-20">
                 <div class="btns text-right">
-                    <button class="b-n p-10-20 b-r-6 f-w-800 f-s-17" style="background: #e4e6eb;">Cancel</button>
-                    <button class="b-n p-10-20 m-l-5 b-r-6 f-w-800 f-s-17"style="background: #216fdb; color:white;">Search</button>
+                    <button class="b-n p-7-18 b-r-6 f-w-800 f-s-16" style="background: #e4e6eb;">Cancel</button>
+                    <button class="b-n p-7-18 m-l-5 b-r-6 f-w-800 f-s-16"style="background: #216fdb; color:white;">Search</button>
                 </div>
             </div>
         </div>
