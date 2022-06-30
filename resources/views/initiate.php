@@ -22,7 +22,7 @@
         <div class="box-shadow b-r-4">
             <div class="p-20" id="hr">
                 <div class="form">
-                    <p class="f-w-600 f-s-18 c-black">Reset Your Password</p>
+                    <p style="color: #162643;" class="f-s-20 c-black">Reset Your Password</p>
                 </div>
             </div>
             <div class="p-20">
@@ -32,7 +32,7 @@
                 <p class="f-s-16">Please enter your email address or your username to search for your account.</p>
             </div>
             <div class="p-l-20 p-r-20 p-b-20" id="hr">
-                <input type="text" class="p-17 w-p-100 b-r-6" style="border: 1px solid #ccd0d5;" placeholder="Enter your email address or your username">
+                <input type="text" class="p-15-17 w-p-100 b-r-6" style="border: 1px solid #ccd0d5;" placeholder="Enter your email address or your username">
             </div>
             <div class="p-15-20">
                 <div class="btns text-right">
