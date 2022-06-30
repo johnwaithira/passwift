@@ -32,10 +32,21 @@
                 </div>
             </div>
             <div class="p-20 wrap" id="hr" style="display: flex;">
-                <div class="col-7 col-m-7 ">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet culpa cum tempore ratione saepe vel, aspernatur nihil? Non illo mollitia delectus, error minus autem enim repellat inventore beatae nam? Beatae.
+                <div class="col-8 col-m-8 ">
+                   <p class="p-10-0">
+                        How do you want to receive the code to reset your password?
+                   </p>
+                    <div class="div p-6-0" style="display: flex;">
+                        <input type="radio" name="" id="">
+                        <div class="account_info">
+                            Send code via SMS
+                            +254726354504
+                        </div>
+                        
+
+                    </div>
                 </div>
-                <div class="col-5 col-m-5 ">
+                <div class="col-4 col-m-4 ">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ratione.
                 </div>
             </div>
