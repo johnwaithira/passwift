@@ -28,7 +28,7 @@
                 <div class="error-div">
 
                 </div>
-                <p class="f-s-16">Please enter your email address or your username to search for your account.</p>
+                <h2 class="f-s-16">Please enter your email address or your username to search for your account.</h2>
             </div>
             <div class="p-l-20 p-r-20 p-b-20" id="hr">
                 <input type="text" class="p-15-17 w-p-100 b-r-6" style="border: 1px solid #ccd0d5;" placeholder="Enter your email address or your username">

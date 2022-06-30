@@ -19,10 +19,10 @@
 </style>
 <div class="p-20">
     <div class="col-5 col-m-6 col-s-9 m-a">
-        <div class="box-shadow b-r-4">
+        <div class="box-shadow b-r-6">
             <div class="p-20" id="hr">
                 <div class="form">
-                    <p style="color: #162643;" class="f-s-20 c-black">Reset Your Password</p>
+                    <h2 style="color: #162643;" class="f-s-20 c-black">Reset Your Password</h2>
                 </div>
             </div>
             <div class="p-20">
