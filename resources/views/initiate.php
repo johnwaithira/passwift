@@ -16,6 +16,12 @@
     ::placeholder{
         font-size: 16px;
     }
+
+    @media (max-width:500px) {
+        .wrap{
+            flex-wrap: wrap;
+        }
+    }
 </style>
 <div class="p-20">
     <div class="col-5 col-m-6 col-s-9 m-a">
@@ -25,12 +31,12 @@
                     <h2 style="color: #162643;" class="f-s-20 c-black">Reset Your Password</h2>
                 </div>
             </div>
-            <div class="p-20" id="hr" style="display: flex;">
-                <div class="col-7">
-                    left
+            <div class="p-20 wrap" id="hr" style="display: flex;">
+                <div class="col-7 col-m-7 ">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet culpa cum tempore ratione saepe vel, aspernatur nihil? Non illo mollitia delectus, error minus autem enim repellat inventore beatae nam? Beatae.
                 </div>
-                <div class="col-4">
-                    right
+                <div class="col-5 col-m-5 ">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ratione.
                 </div>
             </div>
             <div class="p-15-20">
