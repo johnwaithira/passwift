@@ -52,7 +52,11 @@
                     </div>
                 </div>
                 <div class="col-4 col-m-4 ">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ratione.
+                    <div class="profile-pic">
+                        <div class="my-image">
+                            <img class="w-60 h-60 b-r-100" src="/storage/profile.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="p-15-20">
