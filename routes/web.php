@@ -4,3 +4,5 @@
     use Waithira\Passwift\app\route\Route;
     
     Route::get('/', [HomeController::class, 'index']);
+
+    
