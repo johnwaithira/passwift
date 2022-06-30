@@ -4,11 +4,14 @@
 
 ?>
 <style>
-    hr{
-        border-top: 1px solid #ccd0d5;
+
+    #hr{
+        border-bottom: 1px solid #ccd0d5;
     }
     input{
         outline: none;
+        font-size: 17px;
+        color: #8a8d91;
     }
     ::placeholder{
         font-size: 16px;
@@ -17,7 +20,7 @@
 <div class="p-20">
     <div class="col-5 col-m-6 col-s-9 m-a">
         <div class="box-shadow b-r-4">
-            <div class="p-20">
+            <div class="p-20" id="hr">
                 <div class="form">
                     <p class="f-w-600 f-s-18 c-black">Reset Your Password</p>
                 </div>

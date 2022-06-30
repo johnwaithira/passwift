@@ -9,6 +9,7 @@
     }
     input{
         outline: none;
+        font-size: 17px;
     }
     ::placeholder{
         font-size: 16px;
