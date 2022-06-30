@@ -34,7 +34,10 @@
             </div>
             <hr>
             <div class="p-20">
-
+                <div class="btns float-right">
+                    <button>Cancel</button>
+                    <button style="background: #216fdb;">Search</button>
+                </div>
             </div>
         </div>
     </div>
