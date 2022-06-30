@@ -54,7 +54,7 @@
                 <div class="col-4 col-m-4 ">
                     <div class="profile-pic">
                         <div class="my-image">
-                            <img class="w-60 h-60 b-r-100" src="/storage/profile.jpg" alt="">
+                            <img class="w-60 h-60 b-r-100" src="/storage/profile.jpg" >
                         </div>
                     </div>
                 </div>
