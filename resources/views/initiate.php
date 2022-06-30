@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="p-20 wrap" id="hr" style="display: flex;">
-                <div class="col-8 col-m-8 ">
+                <div class="col-7 col-m-7 ">
                    <p class="p-10-0">
                         How do you want to receive the code to reset your password?
                    </p>
@@ -51,7 +51,7 @@
 
                     </div>
                 </div>
-                <div class="col-4 col-m-4 ">
+                <div class="col-5 col-m-5 ">
                     <div class="profile-pic">
                         <div class="my-image">
                             <img class="w-60 h-60 b-r-100" src="/storage/profile.jpg" >
