@@ -7,6 +7,7 @@
     {
         public function identify()
         {
+            $this->setLayout('layouts.app');
             return $this->view('identify');
         }
     }
