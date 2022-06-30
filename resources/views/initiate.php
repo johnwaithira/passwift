@@ -25,8 +25,13 @@
                     <h2 style="color: #162643;" class="f-s-20 c-black">Reset Your Password</h2>
                 </div>
             </div>
-            <div class="p-20" id="hr">
-
+            <div class="p-20" id="hr" style="display: flex;">
+                <div class="col-7">
+                    left
+                </div>
+                <div class="col-4">
+                    right
+                </div>
             </div>
             <div class="p-15-20">
                 <div class="btns text-right">
