@@ -5,8 +5,8 @@
     
     class RoutingController extends Controller
     {
-        public function index()
+        public function identify()
         {
-            return $this->view('home');
+            return $this->view('identify');
         }
     }
