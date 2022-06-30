@@ -1,5 +1,15 @@
+php_value display_errors on
+
+
+
 <IfModule mod_rewrite.c>
-    RewriteEngine on
-    RewriteRule ^$ public/ [L]
-    RewriteRule (.*) public/$1 [L]
+    RewriteEngine On
+
+# Stop processing if already in the /public directory
+    RewriteRule ^public/ - [L]
+
+# Static resources if they exist
+    RewriteCond %{DOCUMENT_ROOT}/public/$1 -f
+    RewriteRule (.+) public/$1 [L]
+    RewriteRule (.*) public/index.php?route=$1 [L,QSA]
 </IfModule>
