@@ -25,19 +25,13 @@
                     <h2 style="color: #162643;" class="f-s-20 c-black">Reset Your Password</h2>
                 </div>
             </div>
-            <div class="p-20">
-                <div class="error-div">
+            <div class="p-20" id="hr">
 
-                </div>
-                <p class="f-s-16">Please enter your email address or your username to search for your account.</p>
-            </div>
-            <div class="p-l-20 p-r-20 p-b-20" id="hr">
-                <input type="text" class="p-15-17 w-p-100 b-r-6" style="border: 1px solid #ccd0d5;" placeholder="Enter your email address or your username">
             </div>
             <div class="p-15-20">
                 <div class="btns text-right">
-                    <button class="b-n p-7-18 b-r-6 f-w-800 f-s-16" style="background: #e4e6eb;">Cancel</button>
-                    <button class="b-n p-7-18 m-l-5 b-r-6 f-w-800 f-s-16"style="background: #216fdb; color:white;">Search</button>
+                    <button class="b-n p-7-18 b-r-6 f-w-800 f-s-16" style="background: #e4e6eb;">Not you?</button>
+                    <button class="b-n p-7-18 m-l-5 b-r-6 f-w-800 f-s-16"style="background: #216fdb; color:white;">Continue</button>
                 </div>
             </div>
         </div>
