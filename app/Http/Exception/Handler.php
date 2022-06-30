@@ -12,6 +12,7 @@
          */
         public function _404(): bool|array|string
         {
+            Application::$app->controller->setLayout('layouts.app');
             Application::$app->router->response->setResposeCode(404);
             return $this->view('errors.404');
         }
