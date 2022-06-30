@@ -7,8 +7,11 @@
     hr{
         border-top: 1px solid #ccd0d5;
     }
-    input:focus{
-        border: 2px solid green;
+    input{
+        outline: none;
+    }
+    ::placeholder{
+        font-size: 18px;
     }
 </style>
 <div class="p-20">
@@ -27,7 +30,7 @@
                 <p class="f-s-18">Please enter your email address or your username to search for your account.</p>
             </div>
             <div class="p-l-20 p-r-20 p-b-20" >
-                <input type="text" class="p-15 w-p-100 b-r-6" style="border: 1px solid #ccd0d5;">
+                <input type="text" class="p-17 w-p-100 b-r-6" style="border: 1px solid #ccd0d5;" placeholder="Enter your email address or your username">
             </div>
             <hr>
             <div class="p-20">
