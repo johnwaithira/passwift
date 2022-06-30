@@ -19,7 +19,7 @@
         <div class="box-shadow b-r-4">
             <div class="p-20">
                 <div class="form">
-                    <p class="f-w-600 f-s-20 c-black">Find Your Account</p>
+                    <p class="f-w-600 f-s-20 c-black">Reset Your Password</p>
                 </div>
             </div>
             <hr style="color:#ccd0d5;">
