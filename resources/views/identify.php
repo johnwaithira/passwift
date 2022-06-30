@@ -14,7 +14,7 @@
             </div>
             <hr>
             <div class="p-20">
-                <p class="f-s-18">Please enter your email address or mobile number to search for your account.</p>
+                <p class="f-s-18">Please enter your email address or your username to search for your account.</p>
             </div>
 
         </div>
