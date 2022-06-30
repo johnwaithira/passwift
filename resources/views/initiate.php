@@ -22,6 +22,10 @@
             flex-wrap: wrap;
         }
     }
+    .account_info p{
+        color: #333333;
+        font-size: 15px;
+    }
 </style>
 <div class="p-20">
     <div class="col-5 col-m-6 col-s-9 m-a">
@@ -38,9 +42,10 @@
                    </p>
                     <div class="div p-6-0" style="display: flex;">
                         <input type="radio" name="" id="">
-                        <div class="account_info">
-                            Send code via SMS
-                            +254726354504
+                        <div class="account_info p-0-10">
+                            
+                            <p class="p-t-20">Send code via Email</p>
+                            <p>waithi*****@gmiail.com</p>
                         </div>
                         
 
