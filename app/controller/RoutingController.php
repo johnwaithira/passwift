@@ -10,4 +10,10 @@
             $this->setLayout('layouts.app');
             return $this->view('identify');
         }
+
+        public function initiate()
+        {
+            $this->setLayout('layouts.app');
+            return $this->view('initiate');
+        }
     }
