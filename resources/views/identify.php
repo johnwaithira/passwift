@@ -9,11 +9,13 @@
         <div class="box-shadow b-r-4">
             <div class="p-20">
                 <div class="form">
-                    <p class="f-w-900 f-s-20 c-black">Find Your Account</p>
+                    <p class="f-w-600 f-s-20 c-black">Find Your Account</p>
                 </div>
             </div>
             <hr>
-            
+            <div class="p-20">
+                <p class="f-s-18">Please enter your email address or mobile number to search for your account.</p>
+            </div>
 
         </div>
     </div>
