@@ -9,9 +9,12 @@
         <div class="box-shadow b-r-4">
             <div class="p-20">
                 <div class="form">
-                    <p>Find Your Account</p>
+                    <p class="f-w-900 f-s-20 c-black">Find Your Account</p>
                 </div>
             </div>
+            <hr>
+            
+
         </div>
     </div>
 </div>
