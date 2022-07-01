@@ -21,11 +21,15 @@
         .wrap{
             flex-wrap: wrap;
         }
+        .cc{
+            text-align: left !important;
+        }
     }
     .account_info p{
         color: #333333;
         font-size: 15px;
     }
+
 </style>
 <div class="p-20">
     <div class="col-5 col-m-6 col-s-9 m-a">
@@ -36,25 +40,34 @@
                 </div>
             </div>
             <div class="p-20 wrap" id="hr" style="display: flex;">
-                <div class="col-7 col-m-7 ">
+                <div class="col-7 col-m-7 col-s-7">
                    <p class="p-10-0">
                         How do you want to receive the code to reset your password?
                    </p>
                     <div class="div p-6-0" style="display: flex;">
-                        <input type="radio" name="" id="">
+                        <input type="radio" name="verification" id="verification" class="verification">
                         <div class="account_info p-0-10">
-                            
-                            <p class="p-t-20">Send code via Email</p>
-                            <p>waithi*****@gmiail.com</p>
+                            <label for="verification" id="verify">
+                                <p class="p-t-20">Send code via Email</p>
+                                <p>waithi*****@gmiail.com</p>
+                            </label>
                         </div>
                         
 
                     </div>
                 </div>
-                <div class="col-5 col-m-5 ">
-                    <div class="profile-pic">
+                <div class="col-5 col-m-5 col-s-5 text-center cc" >
+                    <div class="profile-pic ">
                         <div class="my-image">
                             <img class="w-60 h-60 b-r-100" src="/storage/profile.jpg" >
+                        </div>
+                        <div class="p-14-0">
+                            <p class="f-s-15 p-3-0">
+                                @johnwaithira
+                            </p>
+                            <p class="f-s-14" style="color: #606770;    line-height: 16px;">
+                                Passwift user
+                            </p>
                         </div>
                     </div>
                 </div>
