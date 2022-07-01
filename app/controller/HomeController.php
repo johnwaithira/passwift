@@ -15,4 +15,11 @@
             return $this->view('generate');
 
         }
+
+        public function login()
+        {
+            $this->setLayout('layouts.app');
+            return $this->view('generate');
+
+        }
     }
