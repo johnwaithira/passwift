@@ -1,4 +1,11 @@
-<h1>Passwift</h1>
+
+<?php
+
+use Waithira\Passwift\app\core\Application;
+
+Application::$app->router->resource('views.layouts.auth.navigation.php');
+
+?><h1>Passwift</h1>
 <div id="password-div">
     <input type="text" id="password">
     <input type="text" id="passwordLength">
