@@ -8,4 +8,4 @@ use Waithira\Passwift\app\route\Route;
     Route::get('/generate', [HomeController::class, 'generator']);
     Route::get('/account/identify', [RoutingController::class, 'identify']);
     Route::get('/recover/initiate', [RoutingController::class, 'initiate']);
-    Route::get('/login.php', [HomeController::class, 'login']);
+    Route::get('/login', [HomeController::class, 'login']);
