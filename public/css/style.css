@@ -409,7 +409,9 @@ nav .wrapper{
 .b-one{
     border: 1px solid #1c1c2467;
 }
-
+.b-one-red{
+    border: 1px solid red !important;
+}
 .b-one-bottom{
     border-top: 1px solid #1c1c2467;
     border-left: 1px solid #1c1c2467;

@@ -44,32 +44,52 @@ class Fields
     }
     public function __toString(): string
     {
-        return sprintf(
-            '<div class="%s p-3-15 m-t-4 %s">
-                <input type="%s" name="%s" id="%s" placeholder="%s" value ="%s" %s %s
-                    class="f-s-17 b-n outline-none p-10-15 w-p-100 %s">
-            </div>
-            ',
-            $this->border,
-            $this->class,
-            $this->type,
-            $this->attribute,
-            str_replace(
-                '[]',
-                '',
-                $this->id
-            ),
+       return sprintf( 
+            `<input type="%s" name="%s" id="%s" placeholder="%s" value ="%s" %s %s style="border: 1px solid #ccd0d5;"  class="p-15-17 w-p-100 b-r-6 %s">
+            `,
+                $this->type,
+                $this->attribute,
+                str_replace(
+                    '[]',
+                    '',
+                    $this->id
+                ),
+                str_replace(
+                    $this->placeholder[0],
+                    strtoupper($this->placeholder[0]),
+                    $this->placeholder
+                ),
+                $this->value, 
+                $this->multiple,
+                $this->hidden,
+                $this->inputclass
+            );
+        // return sprintf(
+        //     '<div class="%s p-3-15 m-t-4 %s">
+        //         <input type="%s" name="%s" id="%s" placeholder="%s" value ="%s" %s %s
+        //             class="f-s-17 b-n outline-none p-10-15 w-p-100 %s">
+        //     </div>
+        //     ',
+        //     $this->border,
+        //     $this->class,
+        //     $this->type,
+        //     $this->attribute,
+        //     str_replace(
+        //         '[]',
+        //         '',
+        //         $this->id
+        //     ),
 
-            str_replace(
-                $this->placeholder[0],
-                strtoupper($this->placeholder[0]),
-                $this->placeholder
-            ),
-            $this->value,
-            $this->multiple,
-            $this->hidden,
-            $this->inputclass
-        );
+        //     str_replace(
+        //         $this->placeholder[0],
+        //         strtoupper($this->placeholder[0]),
+        //         $this->placeholder
+        //     ),
+        //     $this->value,
+        //     $this->multiple,
+        //     $this->hidden,
+        //     $this->inputclass
+        // );
     }
 
     public function file(): static

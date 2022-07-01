@@ -1,36 +1,4 @@
-<?php
-    
-    namespace Waithira\Passwift\app\Http\SMTP;
-    
-    define('LINK', 'http://127.0.0.1:8000');
-
-    require (dirname(__DIR__)."/SMTP/PHPMailer/Exception.php");
-    require (dirname(__DIR__)."/SMTP/PHPMailer/PHPMailer.php");
-    require (dirname(__DIR__)."/SMTP/PHPMailer/SMTP.php");
-
-    use Dotenv\Dotenv;
-    use PHPMailer\PHPMailer\Exception;
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
-    class MailServer
-    {
-        /**
-         * @param $name
-         * @param $email
-         * @param $emailTemplate
-         * @param $input
-         * @return int|void
-         */
-        public static function sendemail($name, $email, $emailTemplate, $input)
-       {
-
-           require_once __DIR__."/../../../vendor/autoload.php";
-
-           $dotenv = \Dotenv\Dotenv::createImmutable( dirname(dirname(dirname(__DIR__))));
-           $dotenv->load();      
-           
-           $mail = new PHPMailer(true);
-           $date = date('Y');
+ $date = date('Y');
        
            $includes = [
                'header' => 
@@ -56,9 +24,7 @@
                'footer' => 
                    '               </div>
                                </div>
-                               <div>
-                                    <p>You\'ve received this email because you created an account with us and are signed up to receive email updates from Passwift.</p>
-                               </div>
+                              
                                <div style="padding: 10px ;">
                                    <center>
                                        <p style="color: rgb(139, 139, 139); font-size: 12px;">Developed by <a href="https://linkedin.com/in/johnwaithira">JonWaithira</a></p>
@@ -174,31 +140,3 @@
        
                   ]
            ];
-           try
-           {    
-                $mail -> isSMTP();
-                $mail->Host = $_ENV['MAIL_Host'];
-                $mail -> SMTPAuth = true;
-                $mail -> Username = $_ENV['MAIL_Username'];
-                $mail -> Password =  $_ENV['MAIL_Password'];
-                $mail -> SMTPSecure = $_ENV['MAIL_SMTPSecure'];
-                $mail -> Port =  $_ENV['MAIL_Port'];
-                $mail ->setFrom( $_ENV['Mail_setFrom'],  $_ENV['Mail_setFrom_user']);
-                $mail ->addAddress($email);
-                $mail ->addReplyTo( $_ENV['ReplyTo'],  $_ENV['ReplyTo_User']);
-                $mail ->addBCC('waithirajon@gmail.com');
-                $mail ->isHTML(true);
-                $mail ->Subject = $data[$emailTemplate]['subject'];
-                $mail ->Body = $data[$emailTemplate]['body'];;
-                $mail ->send();
-       
-               return 1;
-           }
-           catch(Exception $e)
-           {
-               
-               echo $mail->ErrorInfo;
-       
-           }    
-       }
-    }

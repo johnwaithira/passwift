@@ -12,15 +12,7 @@ class Form
     }
     public static function end()
     {
-        echo "
-        <script>
-            if(window.history.replaceState)
-            {
-                window.history.replaceState(null, null, window.location.href)
-            }
-        
-        </script>
-        </form>";
+        echo "</form>";
     }
 
     public static function field($attribute)
