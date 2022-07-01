@@ -21,6 +21,9 @@ a{
 .box-shadow2{
 	box-shadow: 0 0 5px 1px #a69ea6;
 }
+.back{
+    background: #f0f2f5;
+}
 .d{
     justify-content: space-between;
     display: flex;
