@@ -1,4 +1,4 @@
-<title>Forgotten Password | Can't Login to Passwift</title>
+<title>Login to Passwift</title>
 <?php
 
 use Waithira\Passwift\app\core\Application;
@@ -28,7 +28,7 @@ use Waithira\Passwift\app\core\Application;
         <div class="box-shadow b-r-6">
             <div class="p-20" >
                 <div class="form">
-                    <h2 style="color: #162643;" class="f-s-18 c-black text-center">Login to Passwift</h2>
+                <h2 style="color: #1c1e21;" class="f-s-24 c-black text-center">Login to Passwift</h2>
                 </div>
             </div>
             <div class="p-10-20">

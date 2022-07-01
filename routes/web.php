@@ -9,3 +9,6 @@ use Waithira\Passwift\app\route\Route;
     Route::get('/account/identify', [RoutingController::class, 'identify']);
     Route::get('/recover/initiate', [RoutingController::class, 'initiate']);
     Route::get('/login', [HomeController::class, 'login']);
+    Route::get('/signup', [HomeController::class, 'create']);
+
+    Route::get('/download', [HomeController::class, 'download']);

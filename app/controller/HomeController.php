@@ -22,4 +22,18 @@
             return $this->view('login');
 
         }
+
+        public function create()
+        {
+            $this->setLayout('layouts.app');
+            return $this->view('create');
+
+        }
+
+        public function download()
+        {
+            $this->setLayout('layouts.app');
+            return $this->view('reset');
+
+        }
     }
