@@ -45,7 +45,7 @@
                         How do you want to receive the code to reset your password?
                    </p>
                     <div class="div p-6-0" style="display: flex;">
-                        <input type="radio" name="verification" id="verification" class="verification">
+                        <input type="radio" checked name="verification" id="verification" class="verification">
                         <div class="account_info p-0-10">
                             <label for="verification" id="verify">
                                 <p class="p-t-20">Send code via Email</p>
