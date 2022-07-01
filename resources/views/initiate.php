@@ -1,6 +1,9 @@
 <title>Forgotten Password | Can't Login to Passwift</title>
 <?php
 
+use Waithira\Passwift\app\core\Application;
+
+Application::$app->router->resource('views.layouts.auth.navigation.php');
 
 ?>
 <style>

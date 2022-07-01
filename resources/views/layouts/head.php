@@ -17,7 +17,3 @@ use Waithira\Passwift\app\core\Application;
     <link rel="shortcut icon" href="/storage/favicon-16x16.png" type="image/x-icon">
 </head>
 <body>
-<?php
-    Application::$app->router->resources('includes.popup');
-    Application::$app->router->resources('form.preventrefresh');
-?>
