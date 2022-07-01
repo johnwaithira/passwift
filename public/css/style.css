@@ -362,6 +362,12 @@ nav .wrapper{
     margin: 0 30px;
     padding:2px !important;
    }
+   .wrap{
+    flex-wrap: wrap;
+    }
+    .cc{
+        text-align: left !important;
+    }
    img{
     width: 100%;
 }
@@ -535,6 +541,22 @@ ul li a:hover{
     .d{
         padding:10px;
     }
+}
+#hr{
+    border-bottom: 1px solid #ccd0d5;
+}
+input{
+    outline: none;
+    font-size: 17px;
+    color: #8a8d91;
+}
+::placeholder{
+    font-size: 16px;
+}
+
+.account_info p{
+    color: #333333;
+    font-size: 15px;
 }
 .count{
         position: absolute;

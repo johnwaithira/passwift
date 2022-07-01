@@ -6,34 +6,6 @@ use Waithira\Passwift\app\core\Application;
 Application::$app->router->resource('views.layouts.auth.navigation.php');
 
 ?>
-<style>
-
-    #hr{
-        border-bottom: 1px solid #ccd0d5;
-    }
-    input{
-        outline: none;
-        font-size: 17px;
-        color: #8a8d91;
-    }
-    ::placeholder{
-        font-size: 16px;
-    }
-
-    @media (max-width:500px) {
-        .wrap{
-            flex-wrap: wrap;
-        }
-        .cc{
-            text-align: left !important;
-        }
-    }
-    .account_info p{
-        color: #333333;
-        font-size: 15px;
-    }
-
-</style>
 <div class="p-20">
     <div class="col-5 col-m-6 col-s-9 m-a">
         <div class="box-shadow b-r-6">
@@ -87,3 +59,4 @@ Application::$app->router->resource('views.layouts.auth.navigation.php');
         </div>
     </div>
 </div>
+<p></p>
