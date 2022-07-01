@@ -1,14 +1,11 @@
+
 <header>
     <nav>
-        <div class="wrapper">
-            <input  type="checkbox" name="checkNavBar"  id="checkNavBar">
+        <div class="d">
             <h1 class="logo"><a href="/"><?php
                        echo "Passwift"
                     ?></a></h1>
-            <div class="nav-items">
-               <div class="links">
-                    <li class="nav-links"><a id="a" href="/contact">Contact</a></li>
-               </div>
+            <div class="">
                <div class="link-btns">
                    <?php
                        session_start();
@@ -16,7 +13,6 @@
                        {
                            ?>
                            <a href="/login" ><button class="bg-inherit">Login</button></a>
-                           <a href="/create"><button class="bg-inherit">Create Acc</button></a>
                            <?php
                        }
                        else{
@@ -27,11 +23,6 @@
                    ?>
                </div>
             </div>
-            <label id="humberger" for="checkNavBar">
-                <div class="menu"></div>
-                <div class="menu mid"></div>
-                <div class="menu"></div>
-            </label>
         </div>
     </nav>
     <hr style="border: 1px solid #f8f8f8">

@@ -21,7 +21,13 @@ a{
 .box-shadow2{
 	box-shadow: 0 0 5px 1px #a69ea6;
 }
-
+.d{
+    justify-content: space-between;
+    display: flex;
+    margin: 0 80px;
+    align-items: center;
+    padding: 20px 0;
+}
 
     
   .warning{
@@ -352,6 +358,10 @@ nav .wrapper{
     .newsletterwrapper{
        width: 90%;
    }     
+   .d{
+    margin: 0 30px;
+    padding:2px !important;
+   }
    img{
     width: 100%;
 }
@@ -464,6 +474,7 @@ ul li a:hover{
     .page:hover .pages-dropdown{
         display: block  !important;
     }
+    
     .pages-dropdown{
         position: absolute !important;
         
@@ -520,6 +531,9 @@ ul li a:hover{
      .nav-items .links li a img{
       width: 40px !important;
       padding-top: 0 !important;
+    }
+    .d{
+        padding:10px;
     }
 }
 .count{
