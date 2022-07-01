@@ -75,7 +75,10 @@ Application::$app->router->resource('views.layouts.auth.navigation.php');
                     </div>
                 </div>
             </div>
-            <div class="p-15-20">
+            <div class="p-15-20 w" style="justify-content: space-between; display: flex; align-items:center;">
+                <div class="remember-password-to-login">
+                    <p style="color: blue; cursor: pointer;" id="trigger-btn" class="f-s-13">Enter password to login</p>
+                </div>
                 <div class="btns text-right">
                     <button class="b-n p-7-18 b-r-6 f-w-800 f-s-16" style="background: #e4e6eb;">Not you?</button>
                     <button class="b-n p-7-18 m-l-5 b-r-6 f-w-800 f-s-16"style="background: #216fdb; color:white;">Continue</button>
