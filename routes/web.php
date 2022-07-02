@@ -2,6 +2,7 @@
     
     use Waithira\Passwift\app\controller\HomeController;
 use Waithira\Passwift\app\controller\RoutingController;
+use Waithira\Passwift\app\controller\AuthController;
 use Waithira\Passwift\app\route\Route;
 use Waithira\Passwift\app\core\Request;
     
@@ -17,3 +18,5 @@ use Waithira\Passwift\app\core\Request;
     Route::post('/user/login', function(Request $request){
         var_dump($request->inputs());
     });
+
+    Route::post('/user/signup',[AuthController::class, 'create']);

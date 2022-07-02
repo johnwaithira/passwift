@@ -45,7 +45,7 @@ class Fields
     public function __toString(): string
     {
        return sprintf( 
-            '<input type="%s" name="%s" id="%s" placeholder="%s" value ="%s" %s %s style="border: 1px solid #ccd0d5;"  class="p-15-17 w-p-100 b-r-6 %s">
+            '<input type="%s" name="%s" id="%s" placeholder="%s" value ="%s" %s %s style="border: 1px solid #ccd0d5;"  class="p-10-17 w-p-100 b-r-6 %s">
             ',
                 $this->type,
                 $this->attribute,

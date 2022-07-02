@@ -26,6 +26,11 @@
             password += chars.substring(number, number +1)
 
         }
-        alert(password)
+        let pwdarea = document.querySelector("#password")
+        pwdarea.value = password
+       console.log(pwdarea.value)
+       
+
+       
     }
 </script>
