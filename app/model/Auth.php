@@ -2,7 +2,10 @@
     
     namespace Waithira\Passwift\app\model;
     
+    use Waithira\Passwift\app\Http\Format\Generator\Rand;
+    use Waithira\Passwift\app\Http\Security\Hash;
     use Waithira\Passwift\app\Http\Security\Validate;
+    use Waithira\Passwift\app\Http\SMTP\MailServer;
     use Waithira\Passwift\database\Database;
 
     class Auth
@@ -22,15 +25,15 @@
                 $qry->execute([$params['email']]);
                 if($qry->rowCount() < 1)
                 {
-                    $params['userid'] = Rand::make(4);
+                    $userid = Rand::make(4);
                     $idqry = $db->prepare("SELECT * FROM users where userid = ?");
-                    $idqry->execute([$params['userid']]);
+                    $idqry->execute([$userid]);
             
                     $otp = Rand::number(1000, 9999);
             
                     if($idqry->rowCount() > 0)
                     {
-                        $params['userid'] = Rand::make(5);
+                        $userid = Rand::make(5);
                     }
                     $username = strtolower
                         (
@@ -39,32 +42,32 @@
                                 ' ',
                                 '',
                                 (
-                                    $params['firstname'].$params['secondname']
+                                    $params['firstname'].$params['surname']
                                 )
                             )
-                        )."_".$params['userid'];
+                        )."_".$userid;
             
-                    $stmt = $db->prepare("INSERT INTO users(userid, username, clientFirstName, clientLastName, clientEmail, clientPassword)
+                    $stmt = $db->prepare("INSERT INTO users(userid, username, clientFirstName, clientSurName, clientEmail, clientPassword)
                     VALUES(?,?,?,?,?,?)");
             
                     if($stmt->execute
                     (
                         [
-                            $params['userid'],
+                            $userid,
                             $username,
                             $params['firstname'],
-                            $params['secondname'],
+                            $params['surname'],
                             $params['email'],
-                            Hash::make(
-                                $params['password']
+                            Hash::make($params['password']
                             )
                         ]
                     )
                     )
                     {
                         $insertotp = $db->prepare("INSERT INTO clientOTP(userid, otp) VALUES (?, ?)");
-                        if($insertotp->execute([$params['userid'], $otp]))
+                        if($insertotp->execute([$userid, $otp]))
                         {
+                            MailServer::sendemail($params['surname'],$params['email'], 'otp', $otp);
                             return true;
                         }
                         else{
@@ -75,7 +78,7 @@
                         echo  "Failed";
                     }
                 }else{
-                    echo  "Email already taken";
+                    echo  "Email is already taken";
                 }
             }
             else{

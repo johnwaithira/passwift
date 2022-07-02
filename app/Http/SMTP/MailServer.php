@@ -48,7 +48,7 @@
                                    <div style="padding: 20px;">
                                        <div>
                                            <div>
-                                               <h3>Passwift Inc</h3>
+                                               <img style="width: 150px" src="https://johnwaithira.github.io/passwift/passwift-removebg-preview.png">
                                            </div>
                                        </div>
            
@@ -181,7 +181,7 @@
                 $mail -> SMTPAuth = true;
                 $mail -> Username = $_ENV['MAIL_Username'];
                 $mail -> Password =  $_ENV['MAIL_Password'];
-                $mail -> SMTPSecure = $_ENV['MAIL_SMTPSecure'];
+                $mail -> SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
                 $mail -> Port =  $_ENV['MAIL_Port'];
                 $mail ->setFrom( $_ENV['Mail_setFrom'],  $_ENV['Mail_setFrom_user']);
                 $mail ->addAddress($email);

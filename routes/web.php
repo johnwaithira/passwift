@@ -19,4 +19,4 @@ use Waithira\Passwift\app\core\Request;
         var_dump($request->inputs());
     });
 
-    Route::post('/user/signup',[AuthController::class, 'create']);
+    Route::post('/user/signup',[AuthController::class, 'create_account']);

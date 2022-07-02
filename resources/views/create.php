@@ -34,7 +34,8 @@
                         <p class="text-center">It's simple and easy</p>
                     </div>
                 </div>
-                <div class="p-t-20 p-l-20 p-r-20  display-flex" >
+                <div id="Error"></div>
+                <div class="p-t-10 p-l-20 p-r-20  display-flex" >
                     <div class="Firstname col-6 ">
                         <?php echo $form::field('firstname')->placeholder("Firstname");?>
                     </div>
@@ -44,7 +45,7 @@
                 </div>
                 <?php CSRF::csrf_token();?>
                 <div class="p-3-20">
-                    <?php echo $form::field('emaill')->placeholder("Enter your email");?>
+                    <?php echo $form::field('email')->placeholder("Enter your email");?>
                 </div>
 
                 <div class="p-3-20">
@@ -82,7 +83,7 @@
     firstname = form.querySelector("#firstname"),
     surname = form.querySelector("#surname"),
     email = form.querySelector("#email"),
-    counrty = form.querySelector("#country"),
+    country = form.querySelector("#country"),
     pwd = form.querySelector("#password");
 
     form.addEventListener("click", (e)=>{
@@ -128,7 +129,25 @@
                     password : password.val()
                 },
                 success : function(res){
-                    console.log(JSON.parse(res))                    
+                    console.log((res))
+                    if(res == "ok")
+                    {
+                        window.location.assign("/login")
+                    }
+                    else
+                    {
+                        var html =  `
+                                      <div class="p-l-20 p-r-20 p-t-10"">
+                                            <div class="p-10-20"  style="background:#612020; color: #e4e6eb">
+                                                ${res}
+                                            </div>
+                                      </div>`;
+                        $("#Error").html(html)
+                        
+                        setTimeout(()=>{
+                            $("#Error").html("")
+                        }, 3000)
+                    }
                 }
             });
            }

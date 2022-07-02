@@ -15,12 +15,11 @@
             return $this->view('identify');
         }
 
-        public function create(Request $request)
+        public function create_account(Request $request)
         {
             $create = new Auth(Application::$app->db);
-            if($create->create_account($request->inputs()))
-            {
-                return $this->redirect('login');
+            if($create->create_account($request->inputs())){
+                return "ok";
             }
         }
     }
