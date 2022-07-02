@@ -3,6 +3,7 @@
 <title>Sign up | Passwift</title>
 <?php
     use Waithira\Passwift\app\core\Application;
+    use Waithira\Passwift\app\Http\CSRF;
     use Waithira\Passwift\Templates\Form;
 
 ?>
@@ -41,7 +42,7 @@
                         <?php echo $form::field('surname')->placeholder("Surname");?>
                     </div>
                 </div>
-
+                <?php CSRF::csrf_token();?>
                 <div class="p-3-20">
                     <?php echo $form::field('emaill')->placeholder("Enter your email");?>
                 </div>
@@ -95,6 +96,7 @@
             var email = $("#email");
             var password = $("#password");
             var country = $("#country");
+            var token = $("#token");
 
             var inputs = $("input");
            for(var i = 0; i< inputs.length; i++)
@@ -121,6 +123,7 @@
                     firstname : firstname.val(),
                     surname : surname.val(),
                     email : email.val(),
+                    csrf_token : token.val(),
                     country : country.val(),
                     password : password.val()
                 },
