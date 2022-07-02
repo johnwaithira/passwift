@@ -3,6 +3,8 @@
     
     use Waithira\Passwift\app\core\Controller;
     use Waithira\Passwift\app\core\Request;
+    use Waithira\Passwift\app\core\Application;
+    use Waithira\Passwift\app\model\Auth;
 
     
     class AuthController extends Controller
@@ -15,6 +17,10 @@
 
         public function create(Request $request)
         {
-           echo json_encode($request->inputs());
+            $create = new Auth(Application::$app->db);
+            if($create->create_account($request->inputs()))
+            {
+                return $this->redirect('login');
+            }
         }
     }
