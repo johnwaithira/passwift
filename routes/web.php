@@ -14,6 +14,7 @@ use Waithira\Passwift\app\core\Request;
     Route::get('/signup', [HomeController::class, 'create']);
     Route::get('/download', [HomeController::class, 'download']);
     Route::get('/logout', [AuthController::class, 'logout']);
+    Route::get('/account/verify', [HomeController::class, 'verify_account']);
     
     
     Route::post('/user/login', [AuthController::class, 'login']);
