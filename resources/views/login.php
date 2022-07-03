@@ -23,7 +23,7 @@
 <div class="p-20">
     <div class="col-4 col-m-6 col-s-8 m-a">
         <div class=" text-center p-20-0">
-            <img class="w-150 m-a" src="https://johnwaithira.github.io/passwift/passwift-removebg-preview.png">
+            <img class="w-150 m-a" src="/storage/passwift.png">
 
         </div>
         <div class="box-shadow b-r-6">

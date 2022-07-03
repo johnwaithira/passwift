@@ -4,11 +4,17 @@
     use Waithira\Passwift\app\core\Controller;
     use Waithira\Passwift\app\core\Request;
     use Waithira\Passwift\app\core\Application;
+    use Waithira\Passwift\app\Http\Security\Auth\Session;
     use Waithira\Passwift\app\model\Auth;
 
     
     class AuthController extends Controller
     {
+        public function logout()
+        {
+            Session::flush();
+            return $this->redirect('login');
+        }
         public function login(Request $request)
         {
             $login = new Auth(Application::$app->db);
