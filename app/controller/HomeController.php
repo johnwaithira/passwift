@@ -37,4 +37,11 @@
             return $this->view('reset');
 
         }
+    
+        public function verify_account()
+        {
+            $this->setLayout('layouts.app');
+            return $this->view('verify');
+        
+        }
     }

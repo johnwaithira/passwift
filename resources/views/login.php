@@ -115,7 +115,7 @@
                         console.log((res))
                         if(res == "ok")
                         {
-                            window.location.assign("/")
+                            window.location.assign("/account/verify")
                         }
                         else
                         {
