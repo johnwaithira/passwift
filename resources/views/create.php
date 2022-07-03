@@ -132,7 +132,7 @@
                     console.log((res))
                     if(res == "ok")
                     {
-                        window.location.assign("/login")
+                        window.location.assign("/account/verify")
                     }
                     else
                     {

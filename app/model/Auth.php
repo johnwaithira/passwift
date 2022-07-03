@@ -157,7 +157,7 @@
                                 $delete_otp = $db->prepare("DELETE FROM clientOTP WHERE userid = ?;");
                                 $delete_otp->execute([$userid]);
                             }
-                            return true
+                            return true;
                         }
                         else{
                             echo  "Invalid otp";
