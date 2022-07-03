@@ -86,7 +86,7 @@
     country = form.querySelector("#country"),
     pwd = form.querySelector("#password");
 
-    form.addEventListener("click", (e)=>{
+    form.addEventListener("submit", (e)=>{
        e.preventDefault()
     })
 

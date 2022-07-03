@@ -19,3 +19,6 @@ use Waithira\Passwift\app\core\Request;
     
     Route::post('/user/login', [AuthController::class, 'login']);
     Route::post('/user/signup',[AuthController::class, 'create_account']);
+    Route::post('/verify', [AuthController::class, 'verify_account']);
+
+    

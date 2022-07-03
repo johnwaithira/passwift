@@ -32,4 +32,9 @@
             }
         }
     
+        public function verify_account(Request $request)
+        {
+            var_dump($request->inputs());
+            
+        }
     }

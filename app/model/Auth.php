@@ -123,4 +123,37 @@
     
     
         }
+    
+        public function user_verify($params = [])
+        {
+            $db = $this->database->pdo;
+            if(Validate::csrf())
+            {
+                $qry = $db->prepare("SELECT * FROM users where clientEmail = ?");
+                $qry->execute([$params['email']]);
+            
+                if($qry->rowCount() < 1)
+                {
+                    echo "Email not registered";
+                }
+                else
+                {
+                    $clientData = $qry->fetch();
+                    if($clientData['clientPassword'] == Hash::make($params['password']))
+                    {
+                        Session::setSession($clientData['userid']);
+                        Session::set('user', [$clientData]);
+                        return true;
+                    }
+                    else
+                    {
+                        echo  "Password error";
+                    }
+                
+                }
+            
+            }
+        
+        
+        }
     }
