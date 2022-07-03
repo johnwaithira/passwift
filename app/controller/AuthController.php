@@ -9,10 +9,13 @@
     
     class AuthController extends Controller
     {
-        public function identify()
+        public function login(Request $request)
         {
-            $this->setLayout('layouts.app');
-            return $this->view('identify');
+            $login = new Auth(Application::$app->db);
+            if($login->user_login($request->inputs()))
+            {
+            
+            }
         }
 
         public function create_account(Request $request)

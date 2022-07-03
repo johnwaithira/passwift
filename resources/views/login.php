@@ -1,6 +1,7 @@
 <title>Login to Passwift</title>
 <?php
     use Waithira\Passwift\app\core\Application;
+    use Waithira\Passwift\app\Http\CSRF;
     use Waithira\Passwift\Templates\Form;
 
 ?>
@@ -32,11 +33,12 @@
                     <h2 style="color: #1c1e21;" class="f-s-24 c-black text-center">Login to Passwift</h2>
                     </div>
                 </div>
-                <div class="p-10-20">
-                    <?php echo $form::field('user')->placeholder("Enter your email");?>
+            <div id="Error"></div>
+            <div class="p-10-20 display-flex" >
+                    <?php echo $form::field('email')->placeholder("Enter your email");?>
                    
                 </div>
-
+                <?php CSRF::csrf_token();?>
                 <div class="p-l-20 p-r-20 p-b-10">
                     <?php echo $form::field('password')->password()->placeholder("Password");?>
                     
@@ -79,46 +81,59 @@
 
     button.addEventListener("click", ()=>{
         $(document).ready(function(){
-            var usern = $("#user");
-            var pwd = $("#password");
-           if(usern.val().length == 0)
-           {
-            $("#user").css({
-                'border' : '1px solid red'
-            })
-           }
-           else{
-            $("#user").css({
-                'border' : '1px solid #1c1c2467'
-            })
-           }
-           if(pwd.val().length == 0)
-           {
-            $("#password").css({
-                'border' : '1px solid red'
-            })
-           }
-           else{
-            $("#password").css({
-                'border' : '1px solid #1c1c2467'
-            })
-           }
+            var email = $("#email");
+            var password = $("#password");
+            var token = $("#token");
 
-           if(usern.val().length > 0 && pwd.val().length > 0)
-           {
-            $.ajax({
-                type: 'post',
-                url :'/user/login',
-                data : {
-                    user : usern.val(),
-                    password : pwd.val()
-
-                },
-                success : function(res){
-                    alert(res)                    
+            var inputs = $("input");
+            for(var i = 0; i< inputs.length; i++)
+            {
+                if(inputs[i].value.length == 0)
+                {
+                    $("#"+ inputs[i].getAttribute("id")).css({
+                        'border' : '1px solid #fb2b2b'
+                    })
+                }else
+                {
+                    $("#"+ inputs[i].getAttribute("id")).css({
+                        'border' : '1px solid #1c1c2467'
+                    })
                 }
-            });
-           }
+            }
+
+            if(password.val().length > 0  && email.val().length > 0)
+            {
+                $.ajax({
+                    type: 'post',
+                    url :'/user/login',
+                    data : {
+                        email : email.val(),
+                        csrf_token : token.val(),
+                        password : password.val()
+                    },
+                    success : function(res){
+                        console.log((res))
+                        if(res == "ok")
+                        {
+                            window.location.assign("/")
+                        }
+                        else
+                        {
+                            var html =  `
+                                      <div class="p-l-20 p-r-20 p-t-10"">
+                                            <div class="p-10-20"  style="background:#612020; color: #e4e6eb">
+                                                ${res}
+                                            </div>
+                                      </div>`;
+                            $("#Error").html(html)
+
+                            setTimeout(()=>{
+                                $("#Error").html("")
+                            }, 3000)
+                        }
+                    }
+                });
+            }
         })
         
     })

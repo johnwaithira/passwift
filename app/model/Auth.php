@@ -3,6 +3,7 @@
     namespace Waithira\Passwift\app\model;
     
     use Waithira\Passwift\app\Http\Format\Generator\Rand;
+    use Waithira\Passwift\app\Http\Security\Auth\Session;
     use Waithira\Passwift\app\Http\Security\Hash;
     use Waithira\Passwift\app\Http\Security\Validate;
     use Waithira\Passwift\app\Http\SMTP\MailServer;
@@ -84,5 +85,43 @@
             else{
                 echo  0;
             }
+        }
+        public static function check()
+        {
+            return Session::checksession();
+        }
+    
+        public function user_login($params)
+        {
+            $db = $this->database->pdo;
+            $db = $this->database->pdo;
+            if(Validate::csrf())
+            {
+                $qry = $db->prepare("SELECT * FROM users where clientEmail = ?");
+                $qry->execute([$params['email']]);
+        
+                if($qry->rowCount() < 1)
+                {
+                    echo "Email not registered";
+                }
+                else
+                {
+                    $clientData = $qry->fetch();
+                    if($clientData['clientPassword'] == Hash::make($params['password']))
+                    {
+                        Session::setSession($clientData['userid']);
+                        Session::set('user', [$clientData]);
+                        return true;
+                    }
+                    else
+                    {
+                        echo  "Password error";
+                    }
+            
+                }
+        
+            }
+    
+    
         }
     }
