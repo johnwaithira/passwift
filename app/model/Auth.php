@@ -91,9 +91,8 @@
             return Session::checksession();
         }
     
-        public function user_login($params)
+        public function user_login($params = [])
         {
-            $db = $this->database->pdo;
             $db = $this->database->pdo;
             if(Validate::csrf())
             {

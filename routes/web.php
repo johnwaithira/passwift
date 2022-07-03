@@ -12,9 +12,9 @@ use Waithira\Passwift\app\core\Request;
     Route::get('/recover/initiate', [RoutingController::class, 'initiate']);
     Route::get('/login', [HomeController::class, 'login']);
     Route::get('/signup', [HomeController::class, 'create']);
-
     Route::get('/download', [HomeController::class, 'download']);
-
+    
+    
     Route::post('/user/login', [AuthController::class, 'login']);
-
+    Route::post('/logout', [AuthController::class, 'logout']);
     Route::post('/user/signup',[AuthController::class, 'create_account']);

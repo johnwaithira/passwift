@@ -14,7 +14,7 @@
             $login = new Auth(Application::$app->db);
             if($login->user_login($request->inputs()))
             {
-            
+                return "ok";
             }
         }
 

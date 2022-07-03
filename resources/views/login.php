@@ -121,7 +121,7 @@
                         {
                             var html =  `
                                       <div class="p-l-20 p-r-20 p-t-10"">
-                                            <div class="p-10-20"  style="background:#612020; color: #e4e6eb">
+                                            <div class="p-10-20"  style="background:#e34f4f; color: #e4e6eb">
                                                 ${res}
                                             </div>
                                       </div>`;
