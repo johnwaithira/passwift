@@ -139,15 +139,29 @@
                 else
                 {
                     $clientData = $qry->fetch();
-                    if($clientData['clientPassword'] == Hash::make($params['password']))
+                    $userid = $clientData['userid'];
+                    $otp = $db->prepare("SELECT * FROM clientOTP where userid = ?");
+                    $otp->execute([$userid]);
+                    if($otp->rowCount() < 1)
                     {
-                        Session::setSession($clientData['userid']);
-                        Session::set('user', [$clientData]);
-                        return true;
+                        echo "Invalid OTP";
                     }
                     else
                     {
-                        echo  "Password error";
+                        $otpquery = $otp->fetch();
+                        if($otpquery['otp'] == $params['otp'])
+                        {
+                            $update_status = $db->prepare("UPDATE users SET status = ? WHERE userid = ?;");
+                            if($update_status->execute([1, $userid]))
+                            {
+                                $delete_otp = $db->prepare("DELETE FROM clientOTP WHERE userid = ?;");
+                                $delete_otp->execute([$userid]);
+                            }
+                            return true
+                        }
+                        else{
+                            echo  "Invalid otp";
+                        }
                     }
                 
                 }

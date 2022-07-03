@@ -34,7 +34,9 @@
     
         public function verify_account(Request $request)
         {
-            var_dump($request->inputs());
-            
+            $verify = new Auth(Application::$app->db);
+            if($verify->user_verify($request->inputs())){
+                return "ok";
+            }
         }
     }
